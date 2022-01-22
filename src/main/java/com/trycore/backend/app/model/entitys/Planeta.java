@@ -41,8 +41,18 @@ public class Planeta {
 	private String terreno;
 	@Basic
 	private Long contador;
+	@Basic
+	private String urlImg;
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = PersonaHasPlaneta.class, mappedBy = "planeta")
 	private List<PersonaHasPlaneta> planetas;
+
+	public String getUrlImg() {
+		return urlImg;
+	}
+
+	public void setUrlImg(String urlImg) {
+		this.urlImg = urlImg;
+	}
 
 	public List<PersonaHasPlaneta> getPlanetas() {
 		return planetas;

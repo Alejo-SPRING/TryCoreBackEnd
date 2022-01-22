@@ -15,6 +15,7 @@ public class PlanetaPojo {
 	private String clima;
 	private String terreno;
 	private Long contador;
+	private String imgUrl;
 
 	public PlanetaPojo(Planeta planeta) {
 		this.id = planeta.getId();
@@ -25,6 +26,15 @@ public class PlanetaPojo {
 		this.clima = planeta.getClima();
 		this.terreno = planeta.getTerreno();
 		this.contador = planeta.getContador();
+		this.imgUrl = planeta.getUrlImg();
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
 	public Long getId() {
